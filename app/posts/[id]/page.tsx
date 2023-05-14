@@ -2,7 +2,7 @@ import styles from "./post.module.css"
 
 export async function getPostById(postId: string) {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${postId}`
+    `${process.env.REACT_APP_API_URL}/${postId}`
   );
 
   if (!res.ok) {
